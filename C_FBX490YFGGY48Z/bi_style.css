@@ -1,0 +1,290 @@
+/*Main Page Borders 1/1/10*/
+
+:root {
+    --thbg: #0f0020cc;
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #f3ebfc;
+    --text-color: #2c3e50;
+    --thColor:#2576a4;
+    --tab-space: 20px; /* Adjust space as needed */
+    --thBColor: #9c5bfc; /*#dbd1f8; /* #D1ECF8;   
+    --tbtnbg: #cac3de;
+    --pgback-ground: #F5E7ED;
+}
+
+/* MAIN  */
+[data-testid="stMain"]{
+padding: 1rem 1rem 1rem;
+}
+[data-testid="stVerticalBlock"]{
+gap: 0.02rem;
+} 
+[data-testid="stMainBlockContainer"]{
+background-color: var(--background-color);
+padding: 1rem 1rem 1rem;
+}
+
+
+
+/* Sidebar Gradient Background */
+[data-testid="stSidebar"] {
+    background-color: var(--thbg);
+} 
+
+.stSidebar [data-testid="stWidgetLabel"] p {
+        font-family: 'Arial Black', sans-serif;  /* Change font */
+        font-size: 14px;                        /* Adjust size */
+        color: #ffffff;                         /* DodgerBlue color */
+}
+.stSidebar .stHeading {
+    color: white;
+}  
+.stSidebar .stMarkdown {
+    color: white;
+}  
+
+/* Snowflake theme colors */
+.stSidebar .stMarkdown h1,
+.stSidebar .stMarkdown h2,
+.stSidebar .stMarkdown h3 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+/*
+.stSidebar [data-baseweb="select"] > div {
+    color: #ffffff;           
+    background-color: #1E88E5; 
+}*/
+
+/* Selected value (displayed after selection) */
+.stSidebar [data-baseweb="select"] > div {
+    background-color: var(--thbg) !important;   /* background of select box */
+    color: #FFFFFF !important;              /* selected text color */
+    border: 1px solid #444A6D !important;   /* border */
+    border-radius: 8px !important;
+    padding: 6px 10px !important;
+    min-height: 38px !important;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s;
+}
+/* Hover effect */
+.stSidebar [data-baseweb="select"]:hover > div {
+    background-color: var(--thbg) !important;
+    border-color: #5A60A1 !important;
+}
+
+/* Focused (active) state */
+.stSidebar [data-baseweb="select"] > div:focus-within {
+    border-color: var(--thbg) !important;
+    box-shadow: 0 0 0 2px rgba(0, 120, 215, 0.3);
+}
+
+/* Dropdown menu container */
+.stSidebar [data-baseweb="menu"] {
+    background-color: var(--thbg) !important;
+    border: 1px solid #3C3C5A !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    padding: 4px 0 !important;
+}
+
+/* Dropdown options (normal state) */
+.stSidebar [data-baseweb="option"] {
+    color: #E0E0E0 !important;
+    padding: 8px 12px !important;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Option hover */
+.stSidebar [data-baseweb="option"]:hover {
+    background-color: var(--thbg) !important;
+    color: #FFFFFF !important;
+}
+
+/* Selected option inside dropdown */
+.stSidebar [data-baseweb="option"][aria-selected="true"] {
+    background-color: var(--thbg) !important;
+    color: #FFFFFF !important;
+}
+
+/* Multi-select tags (if applicable) */
+.stSidebar [data-baseweb="tag"] {
+    background-color: var(--thbg) !important;
+    color: white !important;
+    border-radius: 6px !important;
+    padding: 3px 8px !important;
+    margin-right: 4px !important;
+}
+
+/* Placeholder text */
+.stSidebar [data-baseweb="select"] div[data-baseweb="value-container"] > div:first-child {
+    color: #AAAAAA !important;
+}
+
+/* Selected option (inside dropdown) */
+
+.stSidebar .stRadio [data-testid="stWidgetLabel"] label p {
+    color: white !important;
+    border: none;
+    border-radius: 1px;
+    padding: 0.1rem 1rem;
+    font-family: "Arial", sans-serif;  /* set font type */
+    font-size: 12px;     
+}   
+    
+.stSidebar [data-testid="stRadio"] label p {
+    color: white !important;
+    border: none;
+    border-radius: 1px;
+    padding: 0.1rem 1rem;
+    font-family: "Arial", sans-serif;  /* set font type */
+    font-size: 14px;     
+}   
+
+.stSidebar [data-testid="stCheckbox"] label p {
+    color: white !important;
+    border: none;
+    border-radius: 1px;
+    padding: 0rem 0rem;
+    font-family: "Arial", sans-serif;  /* set font type */
+    font-size: 11px;     
+}
+
+/* Make disabled checkboxes and their labels greyed out */
+div[data-testid="stCheckbox"] label:has(input[disabled]) {
+    color: grey !important;
+    opacity: 0.6 !important;
+    cursor: not-allowed;
+}
+
+/* Also grey-out text input fields when disabled */
+input[disabled] {
+    background-color: #f0f0f0 !important;
+    color: #888 !important;
+    cursor: not-allowed;
+}
+
+
+.stSidebar .stButton > button {
+        background: linear-gradient(45deg, #5aacdb, #5aacdb);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stButton > button {
+        background: linear-gradient(45deg, var(--thbg), var(--thbg));
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stFormSubmitButton > button {
+        background: linear-gradient(45deg, #5aacdb, #5aacdb);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*
+.stSidebar .stSelectbox > div > div {
+    background-color: var(--sidebar-accent);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+*/
+
+[data-testid="stRadio"] label p {
+    color: var(--thbg) !important;
+    border: none;
+    border-radius: 1px;
+    padding: 0.1rem 1rem;
+    font-family: "Arial", sans-serif;  /* set font type */
+    font-size: 14px;     
+}
+[data-testid="stTabs"] label p {
+    color: var(--thbg) !important;
+    font-family: "Arial", sans-serif;  /* set font type */
+    font-size: 14px;     
+}
+
+/* - - START  st.stSidebar   - - */
+
+section[data-testid="stSidebar"] details[data-testid="stExpander"] {
+    background-color: #e4d9f3 !important;     /* background color */
+    border: 1px solid #3C3C5A !important;     /* border color */
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+    margin-bottom: 10px !important;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+section[data-testid="stSidebar"] summary {
+    background-color: transparent;
+    color: #ffffff !important;                /* text color */
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer;
+}
+
+section[data-testid="stSidebar"] summary:hover {
+    background-color: #e4d9f3;
+    color: #0f0020cc !important;                /* highlight color */
+}
+
+section[data-testid="stSidebar"] details[data-testid="stExpander"][open] summary {
+    background-color: #e4d9f3 !important;      /* expanded title bar bg */
+    color:#e4d9f3 !important;                 /* expanded title color */
+    border-bottom: 1px solid #5A60A1 !important;
+    border-radius: 10px 10px 0 0 !important;   /* top rounded only */
+}
+/*
+section[data-testid="stSidebar"] details[data-testid="stExpander"][open] {
+    background-color: #2C2C45 !important;     
+    border-color: #5A60A1 !important;
+}*/
+
+section[data-testid="stSidebar"] details[data-testid="stExpander"] > div {
+    padding: 6px 10px !important;
+    color: #E0E0E0 !important;
+    font-size: 13px !important;
+}
+
+
+/* - - START  st.selectbox   - - */
+
+    /* Target the selectbox container */
+    div[data-baseweb="select"] {
+        background-color: #e6f0ff;  
+        border: 0px solid #f3ebfc;  
+        border-radius: 8px;
+        padding: 0px;
+    }
+
+    /* Dropdown text */
+   div[data-baseweb="select"] > div  {
+        color: #0f0020cc;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+    /* When selected */
+  div[data-baseweb="select"] span {
+        font-size: 12px !important;
+        font-weight: 400;
+    }
+
+
+/* - -  END  st.selectbox   - - */
+
